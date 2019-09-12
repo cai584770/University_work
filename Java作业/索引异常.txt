@@ -1,0 +1,25 @@
+源代码为:
+1. package array;
+2. 
+3. public class Array_1 {
+4.	public static void main(String[] args) {
+5.		int[] a = new int[10];		
+6.		a[11] = 3;
+7.		int b = a[20];
+8.		
+9.		System.out.println(a[11]);
+10.		System.out.println(b);
+11.	}
+12.}
+
+Console显示:Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 11
+	at array.Array_1.main(Array_1.java:6)
+线程"main"中的异常, 下标越界异常, 在Array_1.java 的第6行.
+ 
+原因: 数组的索引编号从0 开始, 一直到数组的长度 - 1, 所以代码中定义的数组实际范围为0 - 9 .
+
+解决办法: 修改成存在的正确索引编号.
+
+注释掉6, 7, 10行,并将9行中的11修改为0 - 9 中的任意一个数字, Console中显示0 .
+
+
