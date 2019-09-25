@@ -1,0 +1,20 @@
+源代码:
+package factorial;
+// 9.25作业
+public class factorial {
+	public static void main(String[] args) {
+		int num = 120;	//定义
+		double sum = 1l;	//计算总和
+		//使用for循环进行运算
+		for (int i = 1; i <= num; i++) {
+			sum = sum * i;	//每一次循环后i+1, sum = i!
+		}
+		
+		System.out.println(sum);
+	}
+}
+Console:5.109094217170944E19
+
+使用int类型的sum时, 可以计算到16!(2004189184), 当输入的num = 17时,  sum = -288522240.
+使用long类型的sum时, 可以计算到20!(2432902008176640000), 当输入的num = 21时, sum = -4249290049419214848.
+使用double类型定义sum可以提高n!.  
